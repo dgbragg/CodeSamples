@@ -18,11 +18,11 @@
 #	Output S, the number that occurs only once.
 
 def lonelyinteger(a) 
-    count = Hash.new 0
-    a.map {|i| count[i]+=1}
-    return count.key(1)
+    counter = Hash.new 0
+    a.map {|i| counter[i]+=1}
+    return counter.key(1)
 end
 
 n = gets.strip.to_i
-a = gets.strip.split(" ").map! {|i| i.to_i}
+a = gets.strip.split(" ").map!(&:to_i)
 print lonelyinteger(a)

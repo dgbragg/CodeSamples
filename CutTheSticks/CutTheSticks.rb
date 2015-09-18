@@ -28,7 +28,7 @@ class CutTheSticks
         @sticks.sort!.reject! {|x| x < 1}
         sticks_min = @sticks.min
         puts @sticks.count if @sticks.count > 0
-          @sticks.map! {|x| x-sticks_min}
+        @sticks.map! {|x| x-sticks_min}
       end
   end
 end
